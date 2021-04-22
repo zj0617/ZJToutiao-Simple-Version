@@ -29,6 +29,7 @@
 - **属性特性**
 
       除了函数之外，特别要注意@property默认属性为readwrite，相当于开放setter、getter。
+      
       我们需要特别留意setter，是否需要对外开放，如果不需要对外开放我们应该使用readonly。
 
       例子：
@@ -37,7 +38,7 @@
 
       @property (nonatomic, strong, readonly) NSArray *records;
       
-     外部只读，但是不可以更改；
+      外部只读，但是不可以更改；
 
 
 
@@ -50,6 +51,7 @@
 **建立单例的原因：**
 
     历史记录考虑过不设置单例，直接发通知给业务方。
+    
     但是考虑到有些需要使用历史记录业务可能在发通知的时候还没被创建，导致历史记录遗漏，所以还是做了一个单例。
 
 
@@ -62,21 +64,18 @@
 
     HistoryRecorder中，内部维护的数组是：
 
-    
     @property (nonatomic, strong) NSMutableArray *internalRecords;
-    
 
     而对外开放的是：
 
-    
     @property (nonatomic, strong, readonly) NSArray *records;
-    
 
     覆盖records的getter，这里需要返回copy，不可变数组。这样做也可以避免外部修改HistoryRecorder维护的数组。
 
     实际的增加记录操作是对于内部的NSMutableArray类型对象操作的；
 
     我覆盖对外可见的NSArray对象的取方法。
+    
     每次获取其值时，都发送copy消息给类扩展中的NSMutableArray类型的属性对应的实例，返回一个不可修改的NSArray实例；
 
 
