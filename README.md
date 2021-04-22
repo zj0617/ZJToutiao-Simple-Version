@@ -7,7 +7,15 @@
 
 ## TODO
 
-    HistoryRecorder的addRecord：接口实现时使用内部线程解决多线程问题。多线程语法还没学到。
+    1、HistoryRecorder的addRecord：接口实现时使用内部线程解决多线程问题，多线程语法还没学到。
+    
+    2、TabBarController的第三、第四个子控制器的界面实现。
+    
+    3、实现输入框的信息搜索。
+    
+    4、实现用户登录。
+    
+    5、整体界面进一步优化。
 
 
 
