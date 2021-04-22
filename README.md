@@ -24,6 +24,7 @@
       写在.h声明里面的都是对外开放的接口。
 
       在继承UIViewController，自定义UITabBarController的子控制器时，子控制器涉及表格视图、输入框、按钮、图片的显示。
+      
       因此需要定义相关类型的属性。将只是该类或者是该类实例才需要使用的属性或者方法在类扩展中声明，从而实现隐藏。
 
 - **属性特性**
@@ -36,7 +37,7 @@
 
       HistoryRecorder开放给外部的接口是：
 
-      @property (nonatomic, strong, readonly) NSArray *records;
+          @property (nonatomic, strong, readonly) NSArray *records;
       
       外部只读，但是不可以更改；
 
@@ -64,11 +65,11 @@
 
     HistoryRecorder中，内部维护的数组是：
 
-    @property (nonatomic, strong) NSMutableArray *internalRecords;
+        @property (nonatomic, strong) NSMutableArray *internalRecords;
 
     而对外开放的是：
 
-    @property (nonatomic, strong, readonly) NSArray *records;
+        @property (nonatomic, strong, readonly) NSArray *records;
 
     覆盖records的getter，这里需要返回copy，不可变数组。这样做也可以避免外部修改HistoryRecorder维护的数组。
 
