@@ -13,7 +13,7 @@
 
 
 
-#### 严格控制开放接口
+### 严格控制开放接口
 
 - **类扩展**
 
@@ -35,7 +35,7 @@
 
 
 
-#### 单例
+### 单例
 
 涉及显示浏览历史记录的功能，自定义单例负责保存浏览记录信息，涉及增加浏览记录、返回浏览记录操作。
 
@@ -47,7 +47,7 @@
 
 
 
-#### copy & mutableCopy
+### copy & mutableCopy
 
 自定义单例HistoryRecorder类用以记录浏览历史，供全局使用。
 
@@ -67,7 +67,7 @@ HistoryRecorder中，内部维护的数组是：
 
 
 
-#### 页面结构设置
+### 页面结构设置
 
 1. TabbarController装NavigationController
 
@@ -81,7 +81,7 @@ HistoryRecorder中，内部维护的数组是：
 
 
 
-#### UITableView&UIControllerView
+### UITableView&UIControllerView
 
 两者都适用于做Feed流（Feed流是持续更新并呈现给用户内容的信息流)，CollectionView可以采用流式布局，更多样化一些。
 
