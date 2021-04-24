@@ -103,7 +103,7 @@
 
 
 
-#### UITableView&UIControllerView
+#### UITableView & UICollectionView
 
     两者都适用于做Feed流（Feed流是持续更新并呈现给用户内容的信息流)，CollectionView可以采用流式布局，更多样化一些。
 
